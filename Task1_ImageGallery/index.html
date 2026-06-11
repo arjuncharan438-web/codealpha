@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="gallery-app">
+  <header class="gallery-header">
+    <h1 class="gallery-title">Photo Gallery</h1>
+    <p class="gallery-subtitle">Explore beautiful images from around the world</p>
+  </header>
+
+  <section class="filter-section">
+    <div class="category-bar" id="categoryBar">
+      <button class="cat-btn active" data-cat="All">All</button>
+      <button class="cat-btn" data-cat="Nature">Nature</button>
+      <button class="cat-btn" data-cat="Architecture">Architecture</button>
+      <button class="cat-btn" data-cat="Travel">Travel</button>
+      <button class="cat-btn" data-cat="Animals">Animals</button>
+      <button class="cat-btn" data-cat="Food">Food</button>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" data-filter="none">Normal</button>
+      <button class="filter-btn" data-filter="grayscale(100%)">Grayscale</button>
+      <button class="filter-btn" data-filter="sepia(80%)">Sepia</button>
+      <button class="filter-btn" data-filter="saturate(150%) hue-rotate(-10deg)">Warm</button>
+      <button class="filter-btn" data-filter="saturate(120%) hue-rotate(30deg)">Cool</button>
+      <button class="filter-btn" data-filter="saturate(200%) contrast(110%)">Vivid</button>
+    </div>
+  </section>
+
+  <div class="image-count" id="imageCount"></div>
+  <main class="gallery-grid" id="galleryGrid"></main>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&#x2715;</button>
+  <button class="lb-nav lb-prev" id="lbPrev">&#8249;</button>
+  <div class="lb-content">
+    <div class="lb-spinner" id="lbSpinner"></div>
+    <img id="lbImg" class="lb-img" src="" alt=""/>
+    <div class="lb-caption">
+      <span class="lb-title" id="lbTitle"></span>
+      <span class="lb-badge" id="lbBadge"></span>
+    </div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext">&#8250;</button>
+</div>
+
+<footer class="gallery-footer">
+  <p>Use &#8592; &#8594; arrow keys to navigate &middot; ESC to close</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
